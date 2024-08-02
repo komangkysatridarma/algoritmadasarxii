@@ -22,7 +22,11 @@ if ($_POST) {
         // Mencari nilai tertinggi
         $nt = max($ns);
 
-        echo "Nilai tertinggi adalah: $nt";
+        $total = array_count_values($ns);
+        $jumlahTertinggi = $total[$nt];
+
+        echo "Nilai tertinggi adalah: $nt <br>";
+        echo "Jumlah nilai tertinggi yang sama: $jumlahTertinggi";
     } else {
         echo "Tidak ada data nilai yang diterima.";
     }
